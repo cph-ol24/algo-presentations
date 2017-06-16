@@ -34,7 +34,7 @@ class App extends React.Component {
             </Link>
           </div>
 
-          <Route exact path="/" component={() => <div>Vælg emne</div>} />
+          <Route exact path="/" component={() => <div>Vælg emne i bunden</div>} />
           <Route path="/stacks" component={StackQueuesBagPresentations} />
         </div>
       </Router>
