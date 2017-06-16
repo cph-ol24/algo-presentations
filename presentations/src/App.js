@@ -2,6 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import StackQueuesBagPresentations from "./stacks-queues-bag";
+import MergesortPresentation from "./mergesort/presentation";
 
 class App extends React.Component {
   render() {
@@ -32,10 +33,17 @@ class App extends React.Component {
             <Link to="/stacks" style={{ marginLeft: 10 }}>
               Stacks, Queues and bags
             </Link>
+
+            <div style={{ marginLeft: 10 }}>|</div>
+
+            <Link to="/mergesort" style={{ marginLeft: 10 }}>
+              Mergesort
+            </Link>
           </div>
 
           <Route exact path="/" component={() => <div>Vælg emne i bunden</div>} />
           <Route path="/stacks" component={StackQueuesBagPresentations} />
+          <Route path="/mergesort" component={MergesortPresentation} />
         </div>
       </Router>
     );
