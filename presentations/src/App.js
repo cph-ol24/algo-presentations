@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import StackQueuesBagPresentations from "./stacks-queues-bag";
 import MergesortPresentation from "./mergesort/presentation";
+import QuicksortPresentation from "./quicksort/presentation";
 
 class App extends React.Component {
   render() {
@@ -21,7 +22,6 @@ class App extends React.Component {
               alignItems: "center",
               fontSize: 14
             }}
-            
             className="navigator"
           >
             <Link to="/stacks" style={{ marginLeft: 10 }}>
@@ -39,11 +39,22 @@ class App extends React.Component {
             <Link to="/mergesort" style={{ marginLeft: 10 }}>
               Mergesort
             </Link>
+
+            <div style={{ marginLeft: 10 }}>|</div>
+
+            <Link to="/quicksort" style={{ marginLeft: 10 }}>
+              Quicksort
+            </Link>
           </div>
 
-          <Route exact path="/" component={() => <div>Vælg emne i bunden</div>} />
+          <Route
+            exact
+            path="/"
+            component={() => <div>Vælg emne i bunden</div>}
+          />
           <Route path="/stacks" component={StackQueuesBagPresentations} />
           <Route path="/mergesort" component={MergesortPresentation} />
+          <Route path="/quicksort" component={QuicksortPresentation} />
         </div>
       </Router>
     );
